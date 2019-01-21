@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  bitcoin_address: MyString
+  amount: MyString
+  email: MyString
+
+two:
+  type: 
+  bitcoin_address: MyString
+  amount: MyString
+  email: MyString

@@ -1,0 +1,2 @@
+class WithdrawMailer < ApplicationMailer
+end

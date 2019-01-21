@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="" style=" background-size: cover;width:100% height:auto; background-image:url('<%= asset_path 'page-inside-bg.jpg' %>')">
+
+
+<div class="page-head section row-vm light" >
+
+
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 style="font-size:36px;">Frequent Questions</h1>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="section section-pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Frequently Asked <span>Questions</span></h4>
+        <div class="gaps size-1x"></div>
+      </div>
+    </div>
+
+    <div class="faq-one row">
+
+    <% @faqs.each do |faq| %>
+    <div class="col-md-6">
+      <div class="single-faq mr-x2">
+        <h5 class="faq-heading"><%= faq.title %>?</h5>
+        <p><%= faq.body %></p>
+      </div>
+      <div class="gaps size-x2"></div>
+    </div>
+
+    <% end %>
+  </div>
+  </div>
+  </div>
+
+<br>
+
+<%= link_to 'New Faq', new_faq_path %>

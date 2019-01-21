@@ -1,0 +1,2 @@
+class DepositMailer < ApplicationMailer
+end

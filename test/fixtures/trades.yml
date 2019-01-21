@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  currency: MyString
+  deposit: MyString
+  expiration: 2019-01-19 23:51:26
+  status: false
+  tradetype: MyString
+  entry: MyString
+  rate: MyString
+  return: MyString
+  user: one
+
+two:
+  currency: MyString
+  deposit: MyString
+  expiration: 2019-01-19 23:51:26
+  status: false
+  tradetype: MyString
+  entry: MyString
+  rate: MyString
+  return: MyString
+  user: two

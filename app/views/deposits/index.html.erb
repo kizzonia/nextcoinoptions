@@ -1,0 +1,99 @@
+
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <div class="card">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <div class="icon-big icon-success text-center">
+                                <i class="ti-wallet"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="numbers">
+                                <p>Deposit History</p>
+                                <%= Deposit.where(user_id: current_user.id).count %>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <hr />
+                        <div class="stats">
+                            <i class="ti-reload"></i> Updated now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="card">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <div class="icon-big icon-success text-center">
+                              <i class="ti-credit-card"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="numbers">
+                                <p>Credit Your Account</p>
+                                <%= link_to new_deposit_path, class: "btn btn-primary" do %>
+                                   Make a Deposit
+                                   <%end%>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <hr />
+                        <div class="stats">
+                            <i class="ti-pulse"></i> Start Trade Now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Deposit History</h4>
+                        <p class="category">Your previous deposits  in the last 24hrs are as follows</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Payment type</th>
+      <th>Email</th>
+      <th> Status </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deposits.each do |d| %>
+      <tr>
+        <td>$<%= d.amount %></td>
+        <td><%= d.payment_type %></td>
+        <td><%= d.email %></td>
+        <td><% if d.status? %><a href="#" class="btn btn-success"> Paid</a> <%else %><a href="#" class="btn btn-danger">Not Confirmed</a> <% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+<br>
+
+<%= link_to 'New Deposit', new_deposit_path, class: "btn btn-success" %>

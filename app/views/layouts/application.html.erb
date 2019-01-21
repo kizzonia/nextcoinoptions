@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="js">
+<head>
+  <title>Nextcoinoptions</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body>
+  <%= render "shared/header" %>
+  <% if notice %>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <p><%= notice %> </p>
+      </div>
+    </div>
+  </div>
+  <% elsif alert %>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="alert alert-danger fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <p><%= alert %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <%= yield %>
+  <%= render "shared/footer" %>
+
+
+  <script>
+    (function(b,i,t,C,O,I,N) {
+      window.addEventListener('load',function() {
+        if(b.getElementById(C))return;
+        I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+        I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+      },false)
+    })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+  </script>
+</body>
+</html>
