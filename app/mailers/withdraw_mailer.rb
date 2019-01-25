@@ -1,5 +1,5 @@
 class WithdrawMailer < ApplicationMailer
-  default :from => "support@nextcoinoptionst.com"
+  default :from => "support@nextcoinoptions.com"
   def withdraw_email(user, withdraw)
     @user = user
     @withdraw = withdraw

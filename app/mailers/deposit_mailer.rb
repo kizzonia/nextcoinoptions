@@ -1,5 +1,5 @@
 class DepositMailer < ApplicationMailer
-  default :from => "support@nextcoinoptionst.com"
+  default :from => "support@nextcoinoptions.com"
   def deposit_email(user, deposit)
     @user = user
     @deposit = deposit
