@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  btc_wallet: MyString
+  Eth_wallet: MyString
+  deposit_id: 1
+  admin_user: one
+
+two:
+  btc_wallet: MyString
+  Eth_wallet: MyString
+  deposit_id: 1
+  admin_user: two

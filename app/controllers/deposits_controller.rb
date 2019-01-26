@@ -8,6 +8,7 @@ class DepositsController < InheritedResources::Base
   end
 
   def show
+    @wallets = Wallet.all
   end
 
   def new

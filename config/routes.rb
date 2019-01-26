@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wallets
   resources :orders
   resources :trades
   resources :contacts
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   resources :accounts
   resources :withdraws
   resources :deposits
+
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
